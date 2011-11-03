@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /macros/latex/contrib/booklet
+# catalog-date 2009-09-02 11:33:10 +0200
+# catalog-license lppl1.3
+# catalog-version 0.7b
 Name:		texlive-booklet
 Version:	0.7b
 Release:	1
@@ -48,6 +54,7 @@ included.
 #- source
 %doc %{_texmfdistdir}/source/latex/booklet/booklet.dtx
 %doc %{_texmfdistdir}/source/latex/booklet/booklet.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -58,3 +65,5 @@ included.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
