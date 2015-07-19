@@ -6,7 +6,7 @@
 # catalog-version 0.7b
 Name:		texlive-booklet
 Version:	0.7b
-Release:	9
+Release:	10
 Summary:	Aids for printing simple booklets
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/booklet
