@@ -1,19 +1,13 @@
-# revision 15878
-# category Package
-# catalog-ctan /macros/latex/contrib/booklet
-# catalog-date 2009-09-02 11:33:10 +0200
-# catalog-license lppl1.3
-# catalog-version 0.7b
 Name:		texlive-booklet
-Version:	0.7b
-Release:	11
+Version:	15878
+Release:	1
 Summary:	Aids for printing simple booklets
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/booklet
 License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/booklet.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/booklet.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/booklet.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/booklet.r15878.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/booklet.doc.r15878.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/booklet.source.r15878.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -28,12 +22,12 @@ Instructions on producing the manual itself as a booklet are
 included.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -47,25 +41,11 @@ included.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.7b-2
-+ Revision: 749835
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.7b-1
-+ Revision: 717966
-- texlive-booklet
-- texlive-booklet
-- texlive-booklet
-- texlive-booklet
-- texlive-booklet
-
