@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	Aids for printing simple booklets
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/booklet
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/booklet
 License:	LPPL1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/booklet.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/booklet.doc.r%{version}.tar.xz
